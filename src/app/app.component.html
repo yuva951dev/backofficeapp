@@ -2,3 +2,10 @@
 <p>
   Start editing to see some magic happen :)
 </p>
+<div>
+<ul>
+  <li class="text" *ngFor="let item of items | async">
+    {{item.Name}}
+  </li>
+</ul>
+</div>
