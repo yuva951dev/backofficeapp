@@ -4,8 +4,9 @@
 </p>
 <div>
 <ul>
-  <li class="text" *ngFor="let item of items | async">
-    {{item.Name }} {{item.Mobile}} {{item.Qualification}}
+  <li class="text" *ngFor="let item of students ">
+    {{item.Name }} {{item.Mobile}} {{item.Qualification}} 
+    <button class="card-link" (click)="RemoveRecord(item.id)">Delete</button>
   </li>
 </ul>
 </div>

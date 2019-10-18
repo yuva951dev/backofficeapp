@@ -6,6 +6,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { HelloComponent } from './hello.component';
+import { EmployeeService } from './employee.service';
 
 @NgModule({
   imports:      [ BrowserModule,
@@ -13,6 +14,7 @@ import { HelloComponent } from './hello.component';
                   AngularFireModule.initializeApp(environment.firebase),
                    AngularFirestoreModule ],
   declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [EmployeeService]
 })
 export class AppModule { }
